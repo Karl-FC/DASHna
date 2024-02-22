@@ -39,6 +39,48 @@ body {
         -ms-user-select: none;
     }
 
+/*QUOTES*/
+    .quotation {
+        background-color: rgba(255, 255, 255, 0.7);
+        position:absolute;
+        padding:3px;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
+        border-radius: 25px;
+    }
+
+    .quote{
+        text-align: center;
+        font-size: 18px;
+        font-family:'Lucida Calligraphy', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-style: italic;
+    }
+
+    .quotation span {
+        display: block;
+        margin-top: 1px;
+        margin-bottom: 7px;
+        margin-right: 10px;
+        float: right;
+        position: relative;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 14px;
+    }
+
+    .quotation span::before {
+        content:" ";
+        width: 10px;
+        height: 2px;
+        background: darkslategray;
+        position: absolute;
+        top: 50%;
+        left: -15px;
+    }
+
+    
+
     /*Search Bar*/
 
     #search {
