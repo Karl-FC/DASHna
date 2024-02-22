@@ -54,9 +54,19 @@ font-size: 30px;
     cursor:pointer;
   }
 
+  .undo-button{
+    flex: 1;
+    cursor:pointer;
+  }
+
 .task {
     cursor:alias;
     user-select: none;
+    padding: 7px;
+    margin-bottom: 10px;
+    background-color:#ffff88;
+    display:inline-block;
+    box-shadow: 1px 2px 5px #000000;
   }
 
   .columns {
