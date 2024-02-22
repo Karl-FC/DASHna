@@ -1,0 +1,92 @@
+  
+*::-webkit-scrollbar {display: none;}*
+
+/*Image Background*/
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background);
+    display: flex;
+    overflow: hidden;
+    
+    background-image: url('/media/bg.jpg');
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+
+}
+
+
+/*TEXT*/
+
+    /*Yun Hello Name na greetings*/
+    .greetings {
+        color:#ffffff;
+        font-size: 100px;
+        font-family: 'Bahnschrift', Arial, Helvetica, sans-serif;
+        text-shadow: 3px 3px 5px #000000;
+        font-weight: 500;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1.1);
+
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+
+    /*Search Bar*/
+
+    #search {
+        padding: 15px;
+        border:none;
+        outline: none;
+        width: 110%;
+        background: transparent;
+        /*Yun isesearch*/
+        font-size: 25px;
+        text-align: center;
+        text-decoration: underline;
+        text-shadow: 1px 1px 0.5px #000000;
+        color: #ffffff;
+    }
+        /*"What do you want to know today?"*/
+        #search::placeholder {
+            color: #ffffff;
+            opacity: 1;
+            text-decoration: underline;
+            font-family: Calibri, Arial;
+            text-shadow: 1px 1px 0.5px #000000;
+            /*height: 50px;
+            width: 300px; */
+            font-size: 25px;
+            text-align: center;
+        }
+
+        .search-form {
+            color:#ffffff;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 39%;
+            left: 49%;
+            transform: translate(-50%, -50%)
+        }
+
+        #search:focus {
+            opacity: 1;
+        }
+
+/*Whiteboard*/
+
+iframe {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    border-radius: 15px;
+  }

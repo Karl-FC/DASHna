@@ -1,0 +1,68 @@
+/* Import font. (Comics Sans kasi why not hahaha)*/
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    overflow: hidden;
+  } /*Nice*/
+    
+    
+::-webkit-scrollbar {display: none;}
+
+/*Para mag center yun form*/
+.todo {
+    display: flex;
+    justify-content: center;
+}
+
+.entire header {
+font-size: 30px;
+
+
+}
+
+
+.todo-input {
+    padding:5px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+    font-size: 16px;
+
+    height: 20px;
+    width: 300px; /* Adjust this value as needed */
+    /*box-shadow: 2px 2px 10px rgba(0, 0, 0, 25);
+        background-color: #f4f4f4;*/
+    border-color: white;
+    /*border-radius: 5px;*/
+    border:none;
+    outline: none;
+    border-bottom: 2px solid #aeaeae;
+  }
+  
+  .todo-button{
+    flex: 1;
+    /*background-color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 25);*/
+    cursor:pointer;
+  }
+
+.task {
+    cursor:alias;
+    user-select: none;
+  }
+
+  .columns {
+    height: 220px;
+    width: 400px;
+    position: relative;
+    border-color: blueviolet;
+    border-width: 5px;
+}

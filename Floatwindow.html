@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DASHna Whiteboard</title>
+    <link rel="stylesheet" href="floatstyle.css" />
+    <script src="drag.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+
+
+
+</head>
+<body>
+    <div class="entire"></div>
+    <!--TO DO LIST-->
+    <header>
+    <div class="todo">
+    <form id="todo-form"> <!--Dapat di kita yun form, blank lang dapat... ata?. Depende sa-->
+        <input type="text" placeholder="Whiteboard" id="todo-input" class="todo-input"> 
+        <button type="submit" class="todo-button" id="add-button">+</button>
+        <button type="button" class="undo-button" id="reset-button">-</button>
+     </form>
+    </header>
+    </div>
+    <div class="columns"> <!--Yun mismong mga words-->
+    <div class="list" id="todo-list"></div>
+    
+    </div>
+
+
+
+</body>
+</html>
