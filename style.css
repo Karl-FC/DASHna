@@ -9,7 +9,7 @@ body {
     display: flex;
     overflow: hidden;
     
-    background-image: url('/media/bg.jpg');
+    background-image: url('media/bg.jpg');
     background-position: center;
     background-size:cover;
     background-repeat: no-repeat;
