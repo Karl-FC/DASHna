@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DASHna</title>
-
+    <script src="code.js" defer></script>
+   <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>-->
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+    <div id="orasan" class="clock" onload="showTime()">
+    </div>
+
     <div class="texts">
         <div>
             <p class="greetings">Hello, Karl!</p>
@@ -18,21 +23,28 @@
                 <input type="text"
                 name="q" 
                 id="search" 
+                title="Type whatever you want to search in Google"
                 placeholder="What do you want to know today?">
                 <input type="submit" value="searchna" style="display: none;">
                 </form>
             </div>
         </div>
-    <div class="quotation">
-            <blockquote class="quote">Loading...</blockquote>
-                <span> Author</span>   
+    <div class="quotation" title="Click the quote to generate a new one">
+            <blockquote id="quote" class="quote">Loading...</blockquote>
+                <h3 id="author" class="author">Please Wait...</h3>   
             </div>
-    <div style="background-color: white;">
-        <iframe class="iframe" src="Floatwindow.html" height="300" width="400"></iframe>
+    <div style="background-color: white;" class="whiteboardframe">
+        <iframe class="iframe" 
+        src="Floatwindow.html" >
+            </iframe>
 
      </div>
+        
+     <!--<div class="mainmenu">
+        <label for="timeFormat">Toggle Time Format:</label>
+            <input type="checkbox" id="TimeFormat">-->
 
-     
+     </div>
 </form>
 </body>
 </html>
