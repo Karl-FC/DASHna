@@ -28,6 +28,48 @@ function showTime() {
 showTime();
 
 
+//Greeting Text//
+window.onload = function() {
+  var greetingText = document.getElementById('greetingstext');
+  var length = greetingstext.innerText.length;
+
+  if (length <= 10) {
+    greetingstext.style.fontSize = '625%';
+  } else if (length <= 12) {
+    greetingstext.style.fontSize = '600%';
+  } else if (length <= 30) {
+    greetingstext.style.fontSize = '400%';
+  } else {
+    greetingstext.style.fontSize = '300%';
+  }
+}
+
+
+
+
+
+//Main Menu//
+document.getElementById('menubutton').addEventListener('click', function() {
+  var mainmenu = document.getElementById('mainmenu');
+  var button = document.getElementById('menubutton');
+  if (mainmenu.style.display === 'none') {
+    mainmenu.style.display = 'block';
+    mainmenu.style.left='0px'
+    button.textContent = '>';
+    button.style.left = '400px'
+  } else {
+    mainmenu.style.display = 'none';
+    button.textContent = '<';
+    mainmenu.style.left='-400px'
+    button.style.left = '0px'
+  }
+});
+
+
+
+
+
+
 
 
 

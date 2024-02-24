@@ -36,6 +36,54 @@ body {
 
 
 
+/*Menu button*/
+#menubutton {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    font-size:500%;
+    font-family: Calibri, 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    color: #f0f0f0;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgba(0,0,0,0.8);
+    border: none;
+    box-shadow: 5px 0px 5px black;
+    transition: display none;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: inline-block;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    outline: none;
+
+  }
+  
+  #mainmenu {
+    color: #f0f0f0;
+    position: fixed;
+    left: -400px;
+    top: 0;
+    width: 400px;
+    height:100%;
+    background-color: rgba(171, 171, 171, 0.8);
+    box-shadow: 5px 0px 10px black;
+    display: inline-block;
+    transition-duration: 0.5s;
+  }
+
+.mainmenuText {
+    padding:5px;
+}
+  
+.preferences {
+    transform: translate(0px, 300%)
+}
+
+
+
+
 
 
 
