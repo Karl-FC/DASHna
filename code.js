@@ -49,23 +49,38 @@ window.onload = function() {
 
 
 //Main Menu//
-document.getElementById('menubutton').addEventListener('click', function() {
-  var mainmenu = document.getElementById('mainmenu');
+
+function openMenu() {
   var button = document.getElementById('menubutton');
-  if (mainmenu.style.display === 'none') {
-    mainmenu.style.display = 'block';
-    mainmenu.style.left='0px'
-    button.textContent = '>';
-    button.style.left = '400px'
-  } else {
-    mainmenu.style.display = 'none';
+  var menu = document.getElementById("mainmenu");
+  
+  if (menu.style.width === "0%") {
+    // Open
+    menu.style.width = "300px";
     button.textContent = '<';
-    mainmenu.style.left='-400px'
-    button.style.left = '0px'
+    button.style.left = '300px';
+  } else {
+    // Close
+    closeMenu();
   }
-});
+}
+
+function closeMenu() {
+  document.getElementById("mainmenu").style.width = "0%";
+  document.getElementById('menubutton').textContent = '>';
+  document.getElementById('menubutton').style.left = '0px';
+}
 
 
+
+//Settings//
+function insertName() {
+  document.getElementById("NameForm").style.display = "block";
+}
+
+function okayName() {
+  document.getElementById("NameForm").style.display = "none";
+}
 
 
 

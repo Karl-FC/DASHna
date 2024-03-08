@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DASHna</title>
     <script src="code.js" defer></script>
-   <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <!--type="media/image/jpg" href="media/logo.jpg"
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>-->
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -41,34 +42,70 @@
      </div>
         <!-- < Menu-->
      <div>
-        <button id="menubutton"><</button>
+        <span id="menubutton" onmouseover="openMenu()">></span>
         <div id="mainmenu">
             <div class="mainmenuText">
             <div class="logo">
-                <img src="/media/logo.jpg" alt="DASHna">
+                <img src="media/logo.jpg" alt="DASHna">
             </div>
         <ul class="menuitems">
             <li><a href="https://www.bing.com" class="alink">Bing</a></li>
-            <li><a href="https://www.youtube.com" class="alink">Youtube</a></li>
             <li><a href="https://www.google.com" class="alink">Google</a></li>
-            <li><a href="https://classroom.google.com" class="alink">Google Classroom</a></li>
-            <li><a href="https://bulms.bicol-u.edu.ph" class="alink">BU LMS</a></li>
-            <li><a href="https://meet.google.com" class="alink">Google Meet</a></li>
+            <li><a href="https://www.youtube.com" class="alink">Youtube</a></li>
+
+            <li class="alink" id="dropclass">Classroom
+                <div class="dropdown-content">
+                    <a href="https://classroom.google.com" class="alink">Google Classroom</a>
+                    <a href="https://bulms.bicol-u.edu.ph" class="alink">BU LMS</a>
+                    <a href="https://meet.google.com" class="alink">Google Meet</a>
+                    <a href="https://www.ilovepdf.com" class="alink">ILovePDF</a>
+                    <a class="alink" id="dropdrop">Checkers</a>
+                        <div class="dropdrop-content">
+                          <a href="#">Link 11</a>
+                          <a href="#">Link 2</a>
+                          <a href="#">Link 3</a>
+                </div>
+            </li>
+            
             <li><a href="https://chat.openai.com" class="alink">ChatGPT</a></li>
             <li><a href="https://www.bing.com/chat" class="alink">Ms Copilot</a></li>
-            <li><a href="https://www.ilovepdf.com" class="alink">ILovePDF.com</a></li>
-            <li><a href="https://www.pinterest.com" class="alink">Pinterest</a></li>
-            <li><a href="https://fmhy.pages.dev" class="alink">Resources</a></li>
+
+            <li class="alink" id="dropres">Resources
+                <div class="dropdown-content">
+                    <a href="https://classroom.google.com" class="alink">Google Classroom</a>
+                    <a href="https://www.pinterest.com" class="alink">Pinterest</a>
+                    <a href="https://fmhy.pages.dev" class="alink">FMHY</a>
+                </div>
+            </li>
         <div class="preferences">
             <li><a href="https://www.discord.com/app" class="alink">Discord</a></li>
-            <li><a href="https://github.com/Karl-FC/DASHna" class="alink">Github</a></li>
-            <li class="alink">Settings</li>
+            <li class="alink" id="dropsettings">Settings
+                    <div class="dropdown-content">
+                    <a onclick="insertName()" class="alink">Name</a>
+                    <a class="alink">Change Theme</a>
+                    <a class="alink">Change Background</a>
+                    <a href="https://github.com/Karl-FC" class="alink">Github</a>
+                    </div></li>
         </div>
     </ul>
                 </div>
             </div>
         
-        
+            <!--Name form-->
+            <div class="nameform" id="nameform">
+                <form action="/action_page.php" class="name-formcontainer">
+                  <h1>Login</h1>
+              
+                  <label for="email"><b>Email</b></label>
+                  <input type="text" placeholder="Enter Email" name="email" required>
+              
+                  <label for="psw"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" name="psw" required>
+              
+                  <button type="submit" class="btn">Login</button>
+                  <button type="button" class="btn cancel" onclick="okayname()">Close</button>
+                </form>
+              </div>
         
         
         <!--<label for="timeFormat">Toggle Time Format:</label>
