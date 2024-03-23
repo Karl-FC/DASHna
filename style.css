@@ -29,7 +29,13 @@ body {
     }
 
 
-
+/*BELOW BUTTONS*/
+    #buttonbar {
+      position:fixed;
+      right: auto;
+      left:50%;
+      bottom: 0px;
+    }
 
 
 
@@ -38,6 +44,7 @@ body {
 
 /*Menu button*/
 #menubutton {
+  z-index: 101;
     position: fixed;
     left: 0;
     top: 50%;
@@ -68,12 +75,12 @@ body {
   }
   
   #mainmenu {
+    z-index: 100;
     height: 100%;
     left: 0px;
     top: 0;
     width: 0%;
     position: fixed;
-    z-index: 1;
 
     overflow-x: hidden;
     transition-duration: 0.5s;
@@ -133,7 +140,7 @@ body {
 }
 
 /*SETTINGS*/
-#dropclass, #dropres, #dropsettings {
+#dropclass, #dropcheck, #dropai, #dropres, #dropsettings {
     position: relative;
     display: inline-block;
     padding: 8px 8px;
@@ -144,11 +151,20 @@ body {
     z-index: 2;
   }
 
-#dropsettings:hover, #dropres:hover, #dropclass:hover, #dropdrop:hover {
+#dropsettings:hover, #dropres:hover, #dropclass:hover, #dropcheck:hover, #dropai:hover, #dropdrop:hover {
     color: rgb(255, 255, 255);
     z-index: 7;
     font-weight: 500;
 }
+
+
+#dropclass:hover .dropdown-content {display: block;}
+#dropcheck:hover .dropdown-content {display: block;}
+#dropai:hover .dropdown-content {display: block;}
+#dropsettings:hover .dropdown-content {display: block;}
+#dropres:hover .dropdown-content {display: block;}
+#dropdrop:hover .dropdrop-content {display: block;}
+
 
 #dropdrop {
     position: relative;
@@ -160,10 +176,6 @@ body {
     z-index: 2;
   }
  
-#dropclass:hover .dropdown-content {display: block;}
-#dropsettings:hover .dropdown-content {display: block;}
-#dropres:hover .dropdown-content {display: block;}
-#dropdrop:hover .dropdrop-content {display: block;}
 
 .dropdown-content {
   display: none;
@@ -177,6 +189,16 @@ body {
   font-weight: 500;
   color: #000000;
   text-decoration: none;
+}
+
+.dropdown-content p {
+  font-size: 12px; 
+  font-style: italic;
+  padding: 0; 
+  margin: 0; 
+  margin-left: 5px; 
+  margin-top: 5px; 
+  color:rgb(195, 195, 195);
 }
 
 .dropdown-content a {
@@ -195,20 +217,36 @@ body {
     z-index: 7;
   }
 
+
   .dropdrop-content {
     display: none;
     position: absolute;
     background-color: #fff;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
-    left: 100px;
-    z-index: 5;
+    left: -500px;
+    z-index: 10;
     font-family: Calibri, 'Gill Sans MT', 'Trebuchet MS', sans-serif;
     font-weight: 500;
     color: #000000;
     text-decoration: none;
   }  
-
+  
+  .dropdrop-content a {
+    color: dimgray;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    z-index: 6;
+  }
+  
+  .dropdrop-content a:hover {
+      background-color: rgb(175, 175, 175);
+      color: rgba(255, 255, 255, 1);
+      border-radius: 0px;
+      font-weight: 500;
+      z-index: 7;
+    }
 
 
 
@@ -224,7 +262,7 @@ body {
     /*Yun Hello Name na greetings*/
     .greetings {
         color:#ffffff;
-        font-size: 625%;
+        font-size: calc(100px + 0.5vw);
         font-family: 'Trebuchet MS', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         text-shadow: 3px 3px 5px #000000;
         font-weight: 900;
@@ -239,6 +277,8 @@ body {
 
         user-select: none;
         -webkit-user-select: none;
+
+        
     }
 
 /*QUOTES*/
@@ -299,6 +339,7 @@ body {
         border:none;
         outline: none;
         width: 110%;
+        min-width: 120%;
         background: transparent;
         /*Yun isesearch*/
         font-size: 156%;
@@ -349,6 +390,8 @@ body {
 
 .whiteboardframe {
     border-color: #ffffff;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 iframe {
@@ -366,9 +409,147 @@ iframe {
 
 
 
-  @media only screen and (max-width: 600px) {
+
+
+
+
+
+
+
+
+/*SETTINGS OPEN*/
+
+.moresettings {
+  display: none;
+  position: fixed;
+  bottom: 20%;
+  right: 20%;
+  padding: 3%;
+  height: 50%;
+  width: 50%;
+  border: 3px solid #f1f1f1;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 1px 1px 0.5px #000000;
+  z-index: 50;
+}
+
+.moresettings h2 {
+margin: 0;
+padding: 0;
+z-index: 999;
+position: absolute;
+top: 15px;
+left: 30px;
+}
+
+#settingnav {
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+width: 140px;
+padding: 0;
+margin: 0;
+background-color: #f1f1f1;
+}
+
+#settingnavtext {
+  list-style-type: none;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  top: 70px;
+
+}
+
+#settingnavtext li {
+display: block;
+color: #000;
+padding: 8px 16px;
+text-decoration: none;
+user-select: none;
+-webkit-user-select: none;
+}
+
+#settingnavtext li:hover {
+display: block;
+background-color: #cccccc;
+color: #000;
+padding: 8px 16px;
+font-weight: 500;
+}
+
+.settingcontent {
+padding:15px;
+margin-left: 20%;
+margin-top: 4%;
+left: 50%;
+}
+
+/*general*/
+.nameformcontainer {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+#entername {
+  font-size: 20px;
+  height: 25px;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+/*appearance*/
+.appearancecontainer h3 {
+margin-top: -20px;
+padding-bottom: 10px;
+
+}
+
+#choosebg img {
+height: 15vh;
+padding: 5px;
+}
+
+/*About*/
+.aboutcontainer {
+display: none;
+position: fixed;
+bottom: 0;
+right: 15px;
+border: 3px solid #f1f1f1;
+z-index: 9;
+}
+
+.search-form {
+  display: flex;
+}
+
+div li {
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
     *::-webkit-scrollbar {display: none;}*
-    /* Styles for mobile devices*/
+  /* Styles for mobile devices*/
     
     .clock {
       font-size: 30px;
@@ -406,27 +587,25 @@ iframe {
     }
 
     iframe {
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        background-color: white;
-        border-radius: 15px;
-        border-color: #ffffff;
-        height:40%;
-        width: 100%
+        display: none;
+
     }
-  }
+
+    #mainmenu {
+      width: 100%;
+    }
+}
   
 
 
 
-  /*SETTINGS OPEN*/
+  
 
-  .nameform {
-    display: none;
-    position: fixed;
-    bottom: 0;
-    right: 15px;
-    border: 3px solid #f1f1f1;
-    z-index: 9;
-  }
+
+
+
+
+
+
+
+  
