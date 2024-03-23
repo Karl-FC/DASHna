@@ -154,6 +154,14 @@ window.onload = updateGreeting;
   showTime();
 
 
+//SEARCH ENGINE//
+function changeSearchEngine(radioInput) {
+  document.querySelector('.search-form').action = radioInput.value;
+};
+
+
+
+
 
 
 

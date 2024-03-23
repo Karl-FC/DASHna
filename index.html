@@ -149,26 +149,41 @@
 
                         <div class="settingcontent">
                     <!--Name form-->
-                                <div id="nameformcontainer">
+                                <div id="nameformcontainer" class="containers">
+                                    <h3 class="subtitle">Account</h3>
                                 <form id="nameform">
                                     <label for="entername">Your Name:</label><br>
                                     <input type="text" maxlength="10" id="entername" name="entername" value="Bro"><br>  
                                 <button type="submit" class="namebtn">Update</button>
-                                </form></div>
+                                </form><br>
+                                    <h3 class="subtitle" >Default Search Engine:</h3>
+                                    <form id="sengine">
+                                        <input type="radio" id="searchergoogs" name="searcher" value="https://www.google.com/search" onchange="changeSearchEngine(this)" checked>
+                                        <label for="searchergoogs">Google</label><br>
+                                        <input type="radio" id="searcherbing" name="searcher" value="https://www.bing.com/search" onchange="changeSearchEngine(this)">
+                                        <label for="searcherbing">Bing</label><br>
+                                        <input type="radio" id="searcherduck" name="searcher" value="https://duckduckgo.com/" onchange="changeSearchEngine(this)">
+                                        <label for="searcherduck">DuckDuckGo</label><br>
+                                        <input type="radio" id="searchereco" name="searcher" value="https://www.ecosia.org/search?q=" onchange="changeSearchEngine(this)">
+                                        <label for="searcherduck">Ecosia</label><br>
+                                        <input type="radio" id="searcheryout" name="searcher" value="https://www.youtube.com/results?search_query=" onchange="changeSearchEngine(this)">
+                                        <label for="searcherduck">Youtube</label><br>  
+                                    </form>
+                            </div>
                         <!--Appearance-->
-                            <div class="appearancecontainer" id="appearancecontainer">
-                                <h3>Background</h3>
+                            <div class="containers" id="appearancecontainer">
+                                <h3 class="subtitle">Background</h3>
                                 <div id="choosebg">
                                         <img src="media\bg.jpg">
                                         <img src="media\bg2.jpg">
                                         <img src="media\bg3.jpg">
                                         <img src="media\bg4.jpg">
                                     </div>
-                                <h3>Theme</h3>
+                                <h3 class="subtitle">Theme</h3>
                                 
                             </div>
                         <!--About-->
-                            <div class="about" id="aboutcontainer">
+                            <div class="containers" id="aboutcontainer">
                                 <p>Page made by Karl-FC for personal use only</p>
                                 <a href="https://github/Karl-FC">Github</a>
                             </div>
